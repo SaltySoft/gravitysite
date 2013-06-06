@@ -95,6 +95,17 @@
             </li >
             {#<li ><a href="/blog.html" >Blog<span class="subheader" >Read the team's news</span ></a ></li >#}
 
+
+
+
+
+
+
+
+
+
+
+
             <li ><a href="/Pages/play" >Play!<span class="subheader" >Play online</span ></a >
             </li >
         </ul >
@@ -114,6 +125,16 @@
                         class="subheader" >Read about the game</span ></a ></li >
                 {#<li ><a href="/Pages/blog" >Blog<span class="subheader" >Read the team's news</span ></a ></li >#}
 
+
+
+
+
+
+
+
+
+
+
                 <li ><a href="/Pages/play" >Play!<span class="subheader" >Play online</span ></a >
                 </li >
             </ul >
@@ -128,12 +149,26 @@
     <!-- social -->
     <div id="social-bar" >
         <ul >
-            <li ><a href="/http://www.facebook.com" title="Become a fan" ><img src="/img/social/facebook_32.png"
-                                                                               alt="Facebook" /></a ></li >
-            <li ><a href="/http://www.twitter.com" title="Follow my tweets" ><img src="/img/social/twitter_32.png"
-                                                                                  alt="Facebook" /></a ></li >
-            <li ><a href="/http://www.google.com" title="Add to the circle" ><img src="/img/social/google_plus_32.png"
-                                                                                  alt="Facebook" /></a ></li >
+            <li >
+                <a href="javascript:void(0);" id="share_facebook" title="Share on facebook" >
+                    <img src="/img/social/facebook_32.png" alt="Facebook" />
+                </a >
+            </li >
+            <li >
+                <a class="twitter popup" href="http://twitter.com/share?text=This%20game%20is%20a%20lot%20of%20fun." title="Tweet it" >
+                    <img src="/img/social/twitter_32.png" alt="Tweeter" />
+                </a >
+
+                {#<a href="javascript:void(0);" id="share_tweeter" class="twitter-share-button"#}
+                   {#title="Follow my tweets" data-lang="en" >#}
+                    {##}
+                {#</a >#}
+            </li >
+            <li >
+                <a href="/http://www.google.com" title="Add to the circle" >
+                    <img src="/img/social/google_plus_32.png" alt="Google+" />
+                </a >
+            </li >
         </ul >
     </div >
     <!-- ENDS social -->
@@ -200,8 +235,40 @@
 {% if flash != "" %}
 <script type="text/javascript" >
     show_message("{{ flash }}");
+
+
 </script >
 {% endif %}
+<script type="text/javascript" >
+    $(document).ready(function () {
+        $("#share_facebook").click(function () {
+            var sharer = "https://www.facebook.com/sharer/sharer.php?u=gravitygame.oufcorp.fr";
+            window.open(sharer + location.href, 'sharer', 'width=626,height=436');
+        });
 
+//        $("#share_tweeter").click(function () {
+////            var sharer = "https://twitter.com/share?url=https%3A%2F%2Fdev.twitter.com%2Fpages%2Ftweet-button";
+//            var sharer = "https://twitter.com/share?url=gravitygame.oufcorp.fr";
+//            window.open(sharer + location.href, 'sharer', 'width=626,height=436');
+//        });
+
+        $('.popup').click(function (event) {
+            var width = 575,
+                    height = 400,
+                    left = ($(window).width() - width) / 2,
+                    top = ($(window).height() - height) / 2,
+                    url = this.href,
+                    opts = 'status=1' +
+                            ',width=' + width +
+                            ',height=' + height +
+                            ',top=' + top +
+                            ',left=' + left;
+
+            window.open(url, 'twitter', opts);
+
+            return false;
+        });
+    });
+</script >
 </body >
 </html >

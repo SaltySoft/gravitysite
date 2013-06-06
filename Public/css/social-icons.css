@@ -57,7 +57,7 @@
 .stumbleupon{ background: url(/img/social/stumbleupon_32.png); }
 .technorati{ background: url(/img/social/technorati_32.png); }
 .tumblr{ background: url(/img/social/tumblr_32.png); }
-#social-bar .twitter{ background: url(/img/social/twitter_32.png); }
+#social-bar .twitter{ background: url(/img/social/twitter_32.png); background-repeat: no-repeat; }
 .viddler{ background: url(/img/social/viddler_32.png); }
 .vimeo{ background: url(/img/social/vimeo_32.png); }
 .virb{ background: url(/img/social/virb_32.png); }
