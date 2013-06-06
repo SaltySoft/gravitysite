@@ -40,7 +40,7 @@ define("ENV", 0);
 define("SERVER_ROOT", rtrim(str_replace("Public/index.php", "", $_SERVER["SCRIPT_NAME"]), "/"));
 
 /** This will be the title of your pages if not specified in the actions. */
-define("DEFAULT_TITLE", "My website");
+define("DEFAULT_TITLE", "Gravity Game");
 
 /**
  * This is the default locale of the website

@@ -21,7 +21,7 @@
  * OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-require_once (ROOT.DS."Config".DS."database.php");
+require_once (ROOT . DS . "Config" . DS . "database.php");
 class PagesController extends Controller
 {
     function home($params = array())
@@ -36,12 +36,14 @@ class PagesController extends Controller
     {
 
         $db_config = new DbConfig;
-        $dsn='mysql:host='.$db_config->dev["host"].';port=3306;dbname='.$db_config->dev["database"].'';
+        $dsn = 'mysql:host=' . $db_config->dev["host"] . ';port=3306;dbname=' . $db_config->dev["database"] . '';
         $this->set("database_status", true);
-        try {
+        try
+        {
 
             $dbh = new PDO($dsn, $db_config->dev["user"], $db_config->dev["password"]);
-        } catch (PDOException $exception) {
+        } catch (PDOException $exception)
+        {
             $this->set("database_status", false);
         }
 
@@ -73,6 +75,7 @@ class PagesController extends Controller
     {
     }
 
+
     function block_setup($params = array())
     {
     }
@@ -91,5 +94,13 @@ class PagesController extends Controller
     {
         $this->flash("sup");
         $this->redirect("/contact");
+    }
+
+    function blog($params = array())
+    {
+    }
+
+    function play($params = array())
+    {
     }
 }
