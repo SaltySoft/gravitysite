@@ -26,7 +26,8 @@ class PagesController extends Controller
 {
     function home($params = array())
     {
-
+        $_SESSION["token"] = md5(microtime());
+        $this->set("token", $_SESSION["token"]);
     }
 
     /**

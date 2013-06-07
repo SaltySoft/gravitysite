@@ -29,7 +29,7 @@ body p{
 body a{
 	text-decoration: none;
 	color: #444;
-	
+
 	-webkit-transition: color 0.3s ease;
 	-moz-transition: color 0.3s ease;
 	-o-transition: color 0.3s ease;
@@ -42,7 +42,7 @@ body a:hover{
 
 #logo{
 	display: block;
-	padding-top: 97px;
+	padding-top: 90px;
 	float: left;
     color: white;
     font-size: 30px;
