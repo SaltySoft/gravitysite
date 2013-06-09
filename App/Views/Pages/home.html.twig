@@ -1,117 +1,121 @@
-<div id="content">
+<div id="content" >
 
     <!-- slider -->
-    <div class="flexslider home-slider">
-        <ul class="slides">
-            <li>
-                <video height="472" width="852" id="ourvideo" controls>
-                    <source src="/videos/vid3.mp4">
-                </video>
-            </li>
-        </ul>
-    </div>
-    <div class="shadow-slider"></div>
+    <div class="flexslider home-slider" >
+        <ul class="slides" >
+            <li >
+                <video height="472" width="852" id="ourvideo" controls >
+                    <source src="/videos/vid3.mp4" >
+                </video >
+            </li >
+        </ul >
+    </div >
+    <div class="shadow-slider" ></div >
     <!-- ENDS slider -->
 
 
-    <h1 class="home-block-heading">What is it ?</h1>
-    <div>
-        <div class="article">
-            In this game, you play a ship, evolving in a 2D solar system. You are supposed to save abandoned solar systems.
+    <h1 class="home-block-heading" >What is it ?</h1 >
+
+    <div >
+        <div class="article" >
+            In this game, you play a ship, evolving in a 2D solar system. You are supposed to save abandoned solar
+            systems.
             Bring back energy to dead stars, and gather up ingredients to put life back on dead planets.
-            <br/><br/>
+            <br /><br />
             The game is entirely written with JavaScript and uses the canvas technology. We have been
             working on this project as an exercise for our studies in Epita, the french engineering school.
             <br /><br />
-            The project is currently in development, but you can let us know if you're interested by <a href="#signup">signing up</a> at the
+            The project is currently in development, but you can let us know if you're interested by <a href="#signup" >signing
+                                                                                                                        up</a >
+            at the
             bottom of the page.
-        </div>
-    </div>
-    <div style="clear:both"></div>
-    <div class="clearfix"></div>
+        </div >
+    </div >
+    <div style="clear:both" ></div >
+    <div class="clearfix" ></div >
     <!-- ENDS featured -->
-    <h1 class="home-block-heading">Features</h1>
+    <h1 class="home-block-heading" >Features</h1 >
 
-    <div class="featured">
-        <figure>
-            <div>
-                <a href="single.html" class="heading">Mouse driven ship</a>
+    <div class="featured" >
+        <figure >
+            <div >
+                <a href="#" class="heading" >Mouse driven ship</a >
                 The game is entirely written in JavaScript and uses canvas technology.
-            </div>
+            </div >
             {#<a class="link" href="single.html"></a>#}
-        </figure>
+        </figure >
 
-        <figure>
+        <figure >
 
-            <div>
-                <a href="single.html" class="heading">Mobile camera</a>
+            <div >
+                <a href="#" class="heading" >Mobile camera</a >
                 Evolve in space and harvest energy, water, amino acids or earth.
-            </div>
+            </div >
             {#<a class="link" href="single.html"></a>#}
-        </figure>
+        </figure >
 
-        <figure>
+        <figure >
 
-            <div>
-                <a href="single.html" class="heading">Orbs gathering</a>
+            <div >
+                <a href="#" class="heading" >Orbs gathering</a >
                 Gather several kinds of orbs, which form basic ingredients for life.
-            </div>
+            </div >
             {#<a class="link" href="single.html"></a>#}
-        </figure>
+        </figure >
 
-        <figure>
+        <figure >
 
-            <div>
-                <a href="single.html" class="heading">Sun lighting</a>
+            <div >
+                <a href="#" class="heading" >Sun lighting</a >
                 Light up the sun to reach potential life planets.
-            </div>
+            </div >
 
-        </figure>
+        </figure >
 
-        <figure>
+        <figure >
 
-            <div>
-                <a href="single.html" class="heading">Life creation</a>
+            <div >
+                <a href="#" class="heading" >Life creation</a >
                 Bring back life on planets by putting all the right ingredients.
-            </div>
+            </div >
 
-        </figure>
-        <figure>
-            <div>
-                <a href="single.html" class="heading">Full HTML5</a>
+        </figure >
+        <figure >
+            <div >
+                <a href="#" class="heading" >Full HTML5</a >
                 The game is entirely written in JavaScript and uses canvas technology.
-            </div>
+            </div >
             {#<a class="link" href="single.html"></a>#}
-        </figure>
-        <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="contact" id="signup">
+        </figure >
+        <div class="clearfix" ></div >
+    </div >
+    <div class="clearfix" ></div >
+    <div class="contact" id="signup" >
 
-        <form id="contact_form" action="/Contacts/create" method="POST" class="pure-form">
-            <legend>Want to be one of the first to try it ?</legend>
+        <form id="contact_form" action="/Contacts/create" method="POST" class="pure-form" >
+            <legend >Want to be one of the first to try it ?</legend >
 
-                <label for="email">Your email : </label>
-                <input type="text" placeholder="Email" name="email" id="email" />
+            <label for="email" >Your email : </label >
+            <input type="text" placeholder="Email" name="email" id="email" />
 
             <input type="hidden" name="token" value="{{ token }}" />
-            <input type="submit" value="Sign up"  class="pure-button notice"/>
-        </form>
+            <input type="submit" value="Sign up" class="pure-button notice" />
+        </form >
 
-    </div>
-    <div class="clearfix"></div>
+    </div >
+    <div class="clearfix" ></div >
 
-    <div class="information">
+    <div class="information" >
 
-    </div>
+    </div >
 
-</div>
+</div >
 <!-- ENDS content -->
 
-<div class="clearfix"></div>
-<div class="shadow-main"></div>
+<div class="clearfix" ></div >
+<div class="shadow-main" ></div >
 
-<script type="text/javascript">
+<script type="text/javascript" >
     $(document).ready(function () {
         $("#contact_form").submit(function () {
             $.post("/Contacts/create", $("#contact_form").serialize(), function (data, status) {
@@ -125,4 +129,4 @@
             return false;
         });
     });
-</script>
+</script >
